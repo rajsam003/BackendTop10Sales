@@ -30,12 +30,15 @@ app.use(expressValidator())
 app.use(cors());
 
 //routes
-app.use('/', authRoutes);
-app.use('/', userRoutes);
-app.use('/', categoryRoutes);
-app.use('/', productRoutes);
+app.use('/api', authRoutes);
+app.use('/api', userRoutes);
+app.use('/api', categoryRoutes);
+app.use('/api', productRoutes);
 
 const port = process.env.PORT || 8000;
+
+// mongodb://<dbuser>:<dbpassword>@ds063168.mlab.com:63168/top10sales
+// mongodb://127.0.0.1:27017/top10sales
 
 app.listen(port, ()=>{
     console.log(`Server is running on port ${port}`);
