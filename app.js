@@ -30,10 +30,10 @@ app.use(expressValidator())
 app.use(cors());
 
 //routes
-app.use('/api', authRoutes);
-app.use('/api', userRoutes);
-app.use('/api', categoryRoutes);
-app.use('/api', productRoutes);
+app.use('/', authRoutes);
+app.use('/', userRoutes);
+app.use('/', categoryRoutes);
+app.use('/', productRoutes);
 
 const port = process.env.PORT || 8000;
 
