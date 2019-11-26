@@ -39,9 +39,9 @@ const port = process.env.PORT || 8000;
 
 // mongodb://<dbuser>:<dbpassword>@ds063168.mlab.com:63168/top10sales
 // mongodb://127.0.0.1:27017/top10sales
+//JWT_SECRET = jhfkjhdfkjhdkjfhkj
 
-
-app.set('port', process.env.PORT || 8000);
+// app.set('port', process.env.PORT || 8000);
 
 app.listen(port, ()=>{
     console.log(`Server is running on port ${port}`);
