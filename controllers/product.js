@@ -267,8 +267,6 @@ exports.photo = (req, res, next) => {
 };
 
 exports.listSearch = (req, res) => {
-    console.log('Inside list Search');
-    console.log('Req : '+JSON.stringify(req.query));
     // create query object to hold search value and category value
     const query = {};
     // assign search value to query.name
@@ -280,7 +278,6 @@ exports.listSearch = (req, res) => {
         }
         // find the product based on query object with 2 properties
         // search and category
-        console.log("Query::"+JSON.stringify(query))
         Product.find(query, (err, products) => {
             console.log('Inside find');
             if (err) {
@@ -288,7 +285,6 @@ exports.listSearch = (req, res) => {
                     error: errorHandler(err)
                 });
             }
-            console.log('Products:: '+JSON.stringify(products))
             res.json(products);
         }).select("-photo");
     }
